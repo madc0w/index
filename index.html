@@ -6,84 +6,105 @@
 
 		<script>
 			function load() {
-				const projects = [{
-					name: 'Adventure Time',
-					link: 'adventure-time',
-				}, {
-					name: 'Mad Music',
-					link: 'mad-music',
-				}, {
-					name: 'Let it Snow!',
-					link: 'bouncing-heads',
-				}, {
-					name: 'N-tris',
-					link: 'n-tris',
-				}, {
-					name: 'Feigenbaum',
-					link: 'feigenbaum',
-				}, {
-					name: 'Mars Finder',
-					link: 'mars-finder',
-				}, {
-					name: 'It is what it is',
-					link: 'it-is-what-it-is',
-				}, {
-					name: 'Naval Treasure (a video game)',
-					link: 'navaltreasure',
-				}, {
-					// TODO
-					name: 'WordSquare',
-					link: 'wordsquare',
-				}, {
-					// TODO
-					name: 'WordDrop',
-					link: 'worddrop',
-				}, {
-					// TODO
-					name: 'Vocabulator',
-					link: 'vocabulator',
-				}, {
-					name: 'Type-o-Matic Game',
-					link: 'typo',
-				}, {
-					// TODO
-					name: 'Cardioid',
-					link: 'cardioid',
-				}, {
-					// TODO
-					name: 'Financial Fitness Forecaster',
-					link: 'financial-fitness-forecaster',
-				}, {
-					name: 'Analogizer',
-					link: 'analogizer',
-				}, {
-					// TODO
-					name: 'ELO Estimator',
-					link: 'elo-estimator',
-				}, {
-					// TODO
-					name: 'Doodles',
-					link: 'doodles',
-					// }, {
-					// 	name: 'The Fifth Ring',
-					// 	link: '',
-					// }, {
-					// 	name: 'Quizler',
-					// 	link: '',
-				}, {
-					// TODO
-					name: 'Plumbus Factory',
-					link: 'plumbus-factory',
-				}];
+				const types = {
+					games: 'Games',
+					tools: 'Tools',
+					other: 'Other',
+				};
+
+				const projects = {
+					games: [
+						{
+							name: 'Adventure Time',
+							link: 'adventure-time',
+						}, {
+							name: 'N-tris',
+							link: 'n-tris',
+						}, {
+							name: 'Naval Treasure',
+							link: 'navaltreasure',
+						}, {
+							// TODO
+							name: 'WordSquare',
+							link: 'wordsquare',
+						}, {
+							// TODO
+							name: 'WordDrop',
+							link: 'worddrop',
+						}, {
+							// TODO
+							name: 'Vocabulator',
+							link: 'vocabulator',
+						}, {
+							name: 'Type-o-Matic',
+							link: 'typo',
+							// }, {
+							// 	name: 'The Fifth Ring',
+							// 	link: '',
+							// }, {
+							// 	name: 'Quizler',
+							// 	link: '',
+						}, {
+							// TODO
+							name: 'Plumbus Factory',
+							link: 'plumbus-factory',
+						},
+					],
+					tools: [
+						{
+							name: 'Mad Music',
+							link: 'mad-music',
+						}, {
+							name: 'Analogizer',
+							link: 'analogizer',
+						}, {
+							// TODO
+							name: 'Financial Fitness Forecaster',
+							link: 'financial-fitness-forecaster',
+						}, {
+							// TODO
+							name: 'ELO Estimator',
+							link: 'elo-estimator',
+						}, {
+							name: 'Mars Finder',
+							link: 'mars-finder',
+						}
+					],
+					other: [
+						{
+							// TODO
+							name: 'Cardioid',
+							link: 'cardioid',
+						}, {
+							// TODO
+							name: 'Doodles',
+							link: 'doodles',
+						}, {
+							name: 'It is what it is',
+							link: 'it-is-what-it-is',
+						}, {
+							name: 'Let it Snow!',
+							link: 'bouncing-heads',
+						}, {
+							name: 'Feigenbaum',
+							link: 'feigenbaum',
+						}
+					]
+				};
+
 
 				let html = '';
 				const linksDiv = document.getElementById('links');
-				for (const proj of projects) {
-					html += `<div class="project-link"> \
+				for (const type in projects) {
+					html += `<div><div class="type-header">${types[type]}</div>`;
+					for (const proj of projects[type]) {
+						html += `<div class="project-link"> \
 <a href="https://madc0w.github.io/${proj.link}">${proj.name}</a> \
 </div>`;
-					linksDiv.innerHTML = html;
+					}
+					html += '</div>';
 				}
+				linksDiv.innerHTML = html;
 			}
 		</script>
 
@@ -131,6 +152,12 @@
 				margin-left: 10px;
 				margin-top: 10px;
 				font-size: 1.2em;
+			}
+
+			.type-header {
+				font-size: 22px;
+				font-weight: bold;
+				margin-top: 18px;
 			}
 
 			#subtitle {
