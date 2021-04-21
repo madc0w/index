@@ -12,14 +12,65 @@
 				}, {
 					name: 'Let it Snow!',
 					link: 'bouncing-heads',
+				}, {
+					name: 'N-tris',
+					link: 'n-tris',
+				}, {
+					name: 'Feigenbaum',
+					link: 'feigenbaum',
+				}, {
+					name: 'Mars Finder',
+					link: 'mars-finder',
+				}, {
+					name: 'It is what it is',
+					link: 'it-is-what-it-is',
+				}, {
+					name: 'Naval Treasure (a video game)',
+					link: 'navaltreasure',
+				}, {
+					name: 'WordSquare',
+					link: 'wordsquare',
+				}, {
+					name: 'WordDrop',
+					link: 'worddrop',
+				}, {
+					name: 'Vocabulator',
+					link: 'vocabulator',
+				}, {
+					name: 'Type-o-Matic Game',
+					link: 'typo',
+				}, {
+					name: 'Cardioid',
+					link: 'cardioid',
+				}, {
+					name: 'Financial Fitness Forecaster',
+					link: 'financial-fitness-forecaster',
+				}, {
+					name: 'Analogizer',
+					link: 'analogizer',
+				}, {
+					name: 'ELO Estimator',
+					link: 'elo-estimator',
+				}, {
+					name: 'Doodles',
+					link: 'doodles',
+					// }, {
+					// 	name: 'The Fifth Ring',
+					// 	link: '',
+					// }, {
+					// 	name: 'Quizler',
+					// 	link: '',
+				}, {
+					name: 'Plumbus Factory',
+					link: 'plumbus-factory',
 				}];
 
 				let html = '';
+				const linksDiv = document.getElementById('links');
 				for (const proj of projects) {
 					html += `<div class="project-link"> \
-<a href="http://madc0w.github.io//${proj.link}">${proj.name}</a> \
+<a href="https://madc0w.github.io/${proj.link}">${proj.name}</a> \
 </div>`;
-					const linksDiv = document.getElementById('link');
 					linksDiv.innerHTML = html;
 				}
 			}
