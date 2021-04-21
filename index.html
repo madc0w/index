@@ -1,7 +1,110 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-	<body>
-		here i am
+	<head>
+		<title>FofoLabs</title>
+
+		<script>
+			function load() {
+				const projects = [{
+					name: 'Mad Music',
+					link: 'mad-music',
+				}, {
+					name: 'Let it Snow!',
+					link: 'bouncing-heads',
+				}];
+
+				let html = '';
+				for (const proj of projects) {
+					html += `<div class="project-link"> \
+<a href="http://madc0w.github.io//${proj.link}">${proj.name}</a> \
+</div>`;
+					const linksDiv = document.getElementById('link');
+					linksDiv.innerHTML = html;
+				}
+			}
+		</script>
+
+		<style>
+			body {
+				font-family: Arial;
+			}
+
+			#left {
+				float: left;
+				width: 720px;
+			}
+
+			#info {
+				width: 400px;
+				margin: 10px;
+				padding: 20px;
+				background: #FFDEAA;
+				float: left;
+				border: solid 2px;
+				border-color: #FF9A00;
+			}
+
+			#info div {
+				margin-bottom: 10px;
+			}
+
+			#byline {
+				font-size: .7em;
+			}
+
+			a {
+				color: blue;
+			}
+
+			h1 {
+				color: #FF9A00;
+			}
+
+			.bold {
+				font-weight: bold;
+			}
+
+			.project-link {
+				margin-left: 10px;
+				margin-top: 10px;
+				font-size: 1.2em;
+			}
+
+			#subtitle {
+				color: #FF9A00;
+				font-size: 0.5em;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				padding-left: 20px;
+				background: #f0f0f0;
+			}
+
+			#title {
+				color: #FF9A00;
+				font-weight: bold;
+				font-size: 2.0em;
+				margin-bottom: 10px;
+				padding-left: 10px;
+				background: #f0f0f0;
+			}
+
+			A:visited {
+				color: red;
+			}
+
+		</style>
+	</head>
+
+	<body onLoad="load();">
+		<div id="title">
+			FofoLabs
+			<div id="subtitle">Where modesty meets madness.</div>
+
+		</div>
+
+		<div id="links">
+		</div>
 	</body>
 
 </html>
