@@ -133,19 +133,13 @@
 			}
 
 			#byline {
+				float: right;
 				font-size: .7em;
+				padding-right: 8px;
 			}
 
 			a {
-				color: blue;
-			}
-
-			h1 {
-				color: #FF9A00;
-			}
-
-			.bold {
-				font-weight: bold;
+				color: #00f;
 			}
 
 			.project-link {
@@ -155,14 +149,14 @@
 			}
 
 			.type-header {
-				font-size: 22px;
+				font-size: 1.8em;
 				font-weight: bold;
 				margin-top: 18px;
 			}
 
 			#subtitle {
 				color: #FF9A00;
-				font-size: 0.5em;
+				font-size: 1.2em;
 				margin-bottom: 10px;
 				padding-bottom: 10px;
 				padding-left: 20px;
@@ -173,7 +167,6 @@
 				color: #FF9A00;
 				font-weight: bold;
 				font-size: 2.0em;
-				margin-bottom: 10px;
 				padding-left: 10px;
 				background: #f0f0f0;
 			}
@@ -182,14 +175,24 @@
 				color: red;
 			}
 
+			A:hover {
+				color: #FF9A00;
+			}
+
 		</style>
 	</head>
 
 	<body onLoad="load();">
-		<div id="title">
-			FofoLabs
+		<div>
+			<div id="title">
+				FofoLabs
+			</div>
+			<div id="byline">
+				<a href="mailto:fofofeedback@runbox.com">
+					Talk to me
+				</a>
+			</div>
 			<div id="subtitle">Where modesty meets madness.</div>
-
 		</div>
 
 		<div id="links">
