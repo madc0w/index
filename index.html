@@ -1,239 +1,242 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>FofoLabs</title>
+
+<head>
+	<title>FofoLabs</title>
+	<!-- 		
 		<script
 			async="true"
 			type="text/javascript"
 			src="https://test.balloonary.io/api/bridge?i=61a5f0c3d3d39450a8b69748"
-		></script>
-		<link rel="icon" type="image/x-icon" href="favicon.png" />
+		></script> -->
+	<link rel="icon" type="image/x-icon" href="favicon.png" />
 
-		<script>
-			function load() {
-				const types = {
-					games: 'Games',
-					tools: 'Tools',
-					other: 'Other',
-				};
+	<script>
+		function load() {
+			const types = {
+				games: 'Games',
+				tools: 'Tools',
+				other: 'Other',
+			};
 
-				const projects = {
-					games: [
-						{
-							name: 'Timeline',
-							link: 'timeline',
-						},
-						{
-							name: 'Wurdle',
-							link: 'wordle',
-						},
-						{
-							name: 'Adventure Quest',
-							link: 'adventure-time',
-						},
-						{
-							name: 'N-tris',
-							link: 'n-tris',
-						},
-						{
-							name: 'Naval Treasure',
-							link: 'navaltreasure',
-						},
-						{
-							name: 'WordSquare',
-							link: 'wordsquare',
-						},
-						{
-							name: 'WordDrop',
-							link: 'worddrop',
-						},
-						{
-							name: 'Type-o-Matic',
-							link: 'typo',
-						},
-						{
-							name: 'Plumbus Factory',
-							link: 'plumbus-factory',
-						},
-					],
-					tools: [
-						{
-							name: 'Math-o-Matix',
-							link: 'https://mathomatix.com',
-						},
-						{
-							name: 'Balloonary',
-							link: 'https://www.balloonary.com',
-						},
-						{
-							name: 'Mad Music',
-							link: 'mad-music',
-						},
-						{
-							name: 'Analogizer',
-							link: 'analogizer',
-						},
-						{
-							name: 'Financial Fitness Forecaster',
-							link: 'financial-fitness-forecaster',
-						},
-						{
-							name: 'ELO Estimator',
-							link: 'elo-estimator',
-						},
-						{
-							name: 'Mars Finder',
-							link: 'mars-finder',
-						},
-						{
-							name: 'Vocabulator',
-							link: 'vocabulator',
-						},
-					],
-					other: [
-						{
-							name: 'Spliner',
-							link: 'spliner',
-						},
-						{
-							name: 'Cardioid',
-							link: 'cardioid',
-							// }, {
-							// 	// TODO
-							// 	name: 'Doodles',
-							// 	link: 'doodles',
-						},
-						{
-							name: 'Quizler',
-							link: 'quizler',
-						},
-						{
-							name: 'It is what it is',
-							link: 'it-is-what-it-is',
-						},
-						{
-							name: 'Let it Snow!',
-							link: 'bouncing-heads',
-						},
-						{
-							name: 'Feigenbaum',
-							link: 'feigenbaum',
-						},
-						{
-							name: 'The Fifth Ring',
-							link: 'fifth-ring',
-						},
-					],
-				};
+			const projects = {
+				games: [
+					{
+						name: 'Timeline',
+						link: 'timeline',
+					},
+					{
+						name: 'Wurdle',
+						link: 'wordle',
+					},
+					{
+						name: 'Adventure Quest',
+						link: 'adventure-time',
+					},
+					{
+						name: 'N-tris',
+						link: 'n-tris',
+					},
+					{
+						name: 'Naval Treasure',
+						link: 'navaltreasure',
+					},
+					{
+						name: 'WordSquare',
+						link: 'wordsquare',
+					},
+					{
+						name: 'WordDrop',
+						link: 'worddrop',
+					},
+					{
+						name: 'Type-o-Matic',
+						link: 'typo',
+					},
+					{
+						name: 'Plumbus Factory',
+						link: 'plumbus-factory',
+					},
+				],
+				tools: [
+					{
+						name: 'Math-o-Matix',
+						link: 'https://mathomatix.com',
+					},
+					{
+						name: 'Balloonary',
+						link: 'https://www.balloonary.com',
+					},
+					{
+						name: 'Mad Music',
+						link: 'mad-music',
+					},
+					{
+						name: 'Analogizer',
+						link: 'analogizer',
+					},
+					{
+						name: 'Financial Fitness Forecaster',
+						link: 'financial-fitness-forecaster',
+					},
+					{
+						name: 'ELO Estimator',
+						link: 'elo-estimator',
+					},
+					{
+						name: 'Mars Finder',
+						link: 'mars-finder',
+					},
+					{
+						name: 'Vocabulator',
+						link: 'vocabulator',
+					},
+				],
+				other: [
+					{
+						name: 'Spliner',
+						link: 'spliner',
+					},
+					{
+						name: 'Cardioid',
+						link: 'cardioid',
+						// }, {
+						// 	// TODO
+						// 	name: 'Doodles',
+						// 	link: 'doodles',
+					},
+					{
+						name: 'Quizler',
+						link: 'quizler',
+					},
+					{
+						name: 'It is what it is',
+						link: 'it-is-what-it-is',
+					},
+					{
+						name: 'Let it Snow!',
+						link: 'bouncing-heads',
+					},
+					{
+						name: 'Feigenbaum',
+						link: 'feigenbaum',
+					},
+					{
+						name: 'The Fifth Ring',
+						link: 'fifth-ring',
+					},
+				],
+			};
 
-				let html = '';
-				const linksDiv = document.getElementById('links');
-				for (const type in projects) {
-					html += `<div><div class="type-header">${types[type]}</div>`;
-					for (const proj of projects[type]) {
-						const link = proj.link.includes('://')
-							? proj.link
-							: `https://madc0w.github.io/${proj.link}`;
-						html += `<div class="project-link"> \
+			let html = '';
+			const linksDiv = document.getElementById('links');
+			for (const type in projects) {
+				html += `<div><div class="type-header">${types[type]}</div>`;
+				for (const proj of projects[type]) {
+					const link = proj.link.includes('://')
+						? proj.link
+						: `https://madc0w.github.io/${proj.link}`;
+					html += `<div class="project-link"> \
 <a href="${link}">${proj.name}</a> \
 </div>`;
-					}
-					html += '</div>';
 				}
-				linksDiv.innerHTML = html;
+				html += '</div>';
 			}
-		</script>
+			linksDiv.innerHTML = html;
+		}
+	</script>
 
-		<style>
-			body {
-				font-family: Arial;
-			}
+	<style>
+		body {
+			font-family: Arial;
+		}
 
-			#icon-img {
-				height: 40px;
-				padding-top: 8px;
-			}
+		#icon-img {
+			height: 40px;
+			padding-top: 8px;
+		}
 
-			#left {
-				float: left;
-				width: 720px;
-			}
+		#left {
+			float: left;
+			width: 720px;
+		}
 
-			#info {
-				width: 400px;
-				margin: 10px;
-				padding: 20px;
-				background: #ffdeaa;
-				float: left;
-				border: solid 2px;
-				border-color: #ff9a00;
-			}
+		#info {
+			width: 400px;
+			margin: 10px;
+			padding: 20px;
+			background: #ffdeaa;
+			float: left;
+			border: solid 2px;
+			border-color: #ff9a00;
+		}
 
-			#info div {
-				margin-bottom: 10px;
-			}
+		#info div {
+			margin-bottom: 10px;
+		}
 
-			#byline {
-				float: right;
-				font-size: 0.7em;
-				padding-right: 8px;
-			}
+		#byline {
+			float: right;
+			font-size: 0.7em;
+			padding-right: 8px;
+		}
 
-			a {
-				color: #00f;
-			}
+		a {
+			color: #00f;
+		}
 
-			.project-link {
-				margin-left: 10px;
-				margin-top: 10px;
-				font-size: 1.2em;
-			}
+		.project-link {
+			margin-left: 10px;
+			margin-top: 10px;
+			font-size: 1.2em;
+		}
 
-			.type-header {
-				font-size: 1.8em;
-				font-weight: bold;
-				margin-top: 18px;
-			}
+		.type-header {
+			font-size: 1.8em;
+			font-weight: bold;
+			margin-top: 18px;
+		}
 
-			#subtitle {
-				color: #ff9a00;
-				font-size: 1.2em;
-				margin-bottom: 10px;
-				padding-bottom: 10px;
-				padding-left: 20px;
-				background: #f0f0f0;
-			}
+		#subtitle {
+			color: #ff9a00;
+			font-size: 1.2em;
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+			padding-left: 20px;
+			background: #f0f0f0;
+		}
 
-			#title {
-				color: #ff9a00;
-				font-weight: bold;
-				font-size: 2em;
-				padding-left: 10px;
-				background: #f0f0f0;
-			}
+		#title {
+			color: #ff9a00;
+			font-weight: bold;
+			font-size: 2em;
+			padding-left: 10px;
+			background: #f0f0f0;
+		}
 
-			A:visited {
-				color: red;
-			}
+		A:visited {
+			color: red;
+		}
 
-			A:hover {
-				color: #ff9a00;
-			}
-		</style>
-	</head>
+		A:hover {
+			color: #ff9a00;
+		}
+	</style>
+</head>
 
-	<body onLoad="load();">
-		<div>
-			<div id="title">
-				<img id="icon-img" src="favicon.png" />
-				FofoLabs
-			</div>
-			<div id="byline">
-				<a href="mailto:fofofeedback@runbox.com"> Talk to me </a>
-			</div>
-			<div id="subtitle">Where modesty meets madness.</div>
+<body onLoad="load();">
+	<div>
+		<div id="title">
+			<img id="icon-img" src="favicon.png" />
+			FofoLabs
 		</div>
+		<div id="byline">
+			<a href="mailto:fofofeedback@runbox.com"> Talk to me </a>
+		</div>
+		<div id="subtitle">Where modesty meets madness.</div>
+	</div>
 
-		<div id="links"></div>
-	</body>
+	<div id="links"></div>
+</body>
+
 </html>
