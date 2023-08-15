@@ -41,142 +41,146 @@
 		<link rel="icon" type="image/x-icon" href="favicon.png" />
 
 		<script>
-			function load() {
-				const types = {
-					games: 'Games',
-					tools: 'Tools',
-					other: 'Other',
-				};
+						function load() {
+							const types = {
+								games: 'Games',
+								tools: 'Tools',
+								other: 'Other',
+							};
 
-				const projects = {
-					games: [
-						{
-							name: 'The Xmas Game',
-							link: 'xmas',
-						},
-						{
-							name: 'Timeline',
-							link: 'timeline',
-						},
-						{
-							name: 'Wurdle',
-							link: 'wordle',
-						},
-						{
-							name: 'Adventure Quest',
-							link: 'adventure-time',
-						},
-						{
-							name: 'N-tris',
-							link: 'n-tris',
-						},
-						{
-							name: 'Naval Treasure',
-							link: 'navaltreasure',
-						},
-						{
-							name: 'WordSquare',
-							link: 'wordsquare',
-						},
-						{
-							name: 'WordDrop',
-							link: 'worddrop',
-						},
-						{
-							name: 'Type-o-Matic',
-							link: 'typo',
-						},
-						{
-							name: 'Plumbus Factory',
-							link: 'plumbus-factory',
-						},
-					],
-					tools: [
-						{
-							name: 'Math-o-Matix',
-							link: 'https://mathomatix.com',
-						},
-						{
-							name: 'Balloonary',
-							link: 'https://www.balloonary.com',
-						},
-						{
-							name: 'Mad Music',
-							link: 'mad-music',
-						},
-						{
-							name: 'Analogizer',
-							link: 'analogizer',
-						},
-						{
-							name: 'Financial Fitness Forecaster',
-							link: 'financial-fitness-forecaster',
-						},
-						{
-							name: 'ELO Estimator',
-							link: 'elo-estimator',
-						},
-						{
-							name: 'Mars Finder',
-							link: 'mars-finder',
-						},
-						{
-							name: 'Vocabulator',
-							link: 'vocabulator',
-						},
-					],
-					other: [
-						{
-							name: 'Spliner',
-							link: 'spliner',
-						},
-						{
-							name: 'Cardioid',
-							link: 'cardioid',
-							// }, {
-							// 	// TODO
-							// 	name: 'Doodles',
-							// 	link: 'doodles',
-						},
-						{
-							name: 'Quizler',
-							link: 'quizler',
-						},
-						{
-							name: 'It is what it is',
-							link: 'it-is-what-it-is',
-						},
-						{
-							name: 'Let it Snow!',
-							link: 'bouncing-heads',
-						},
-						{
-							name: 'Feigenbaum',
-							link: 'feigenbaum',
-						},
-						{
-							name: 'The Fifth Ring',
-							link: 'fifth-ring',
-						},
-					],
-				};
+							const projects = {
+								games: [
+									{
+										name: 'The Xmas Game',
+										link: 'xmas',
+									},
+									{
+										name: 'Timeline',
+										link: 'timeline',
+									},
+									{
+										name: 'Wurdle',
+										link: 'wordle',
+									},
+									{
+										name: 'Adventure Quest',
+										link: 'adventure-time',
+									},
+									{
+										name: 'N-tris',
+										link: 'n-tris',
+									},
+									{
+										name: 'Naval Treasure',
+										link: 'navaltreasure',
+									},
+									{
+										name: 'WordSquare',
+										link: 'wordsquare',
+									},
+									{
+										name: 'WordDrop',
+										link: 'worddrop',
+									},
+									{
+										name: 'Type-o-Matic',
+										link: 'typo',
+									},
+									{
+										name: 'Plumbus Factory',
+										link: 'plumbus-factory',
+									},
+								],
+								tools: [
+									{
+										name: 'Set Solver',
+										link: 'https://madc0w.github.io/set/solver.html'
+									}
+									{
+										name: 'Math-o-Matix',
+										link: 'https://mathomatix.com',
+									},
+									{
+										name: 'Balloonary',
+										link: 'https://www.balloonary.com',
+									},
+									{
+										name: 'Mad Music',
+										link: 'mad-music',
+									},
+									{
+										name: 'Analogizer',
+										link: 'analogizer',
+									},
+									{
+										name: 'Financial Fitness Forecaster',
+										link: 'financial-fitness-forecaster',
+									},
+									{
+										name: 'ELO Estimator',
+										link: 'elo-estimator',
+									},
+									{
+										name: 'Mars Finder',
+										link: 'mars-finder',
+									},
+									{
+										name: 'Vocabulator',
+										link: 'vocabulator',
+									},
+								],
+								other: [
+									{
+										name: 'Spliner',
+										link: 'spliner',
+									},
+									{
+										name: 'Cardioid',
+										link: 'cardioid',
+										// }, {
+										// 	// TODO
+										// 	name: 'Doodles',
+										// 	link: 'doodles',
+									},
+									{
+										name: 'Quizler',
+										link: 'quizler',
+									},
+									{
+										name: 'It is what it is',
+										link: 'it-is-what-it-is',
+									},
+									{
+										name: 'Let it Snow!',
+										link: 'bouncing-heads',
+									},
+									{
+										name: 'Feigenbaum',
+										link: 'feigenbaum',
+									},
+									{
+										name: 'The Fifth Ring',
+										link: 'fifth-ring',
+									},
+								],
+							};
 
-				let html = '';
-				const linksDiv = document.getElementById('links');
-				for (const type in projects) {
-					html += `<div><div class="type-header">${types[type]}</div>`;
-					for (const proj of projects[type]) {
-						const link = proj.link.includes('://')
-							? proj.link
-							: `https://madc0w.github.io/${proj.link}`;
-						html += `<div class="project-link"> \
-<a href="${link}">${proj.name}</a> \
-</div>`;
-					}
-					html += '</div>';
-				}
-				linksDiv.innerHTML = html;
-			}
+							let html = '';
+							const linksDiv = document.getElementById('links');
+							for (const type in projects) {
+								html += `<div><div class="type-header">${types[type]}</div>`;
+								for (const proj of projects[type]) {
+									const link = proj.link.includes('://')
+										? proj.link
+										: `https://madc0w.github.io/${proj.link}`;
+									html += `<div class="project-link"> \
+			<a href="${link}">${proj.name}</a> \
+			</div>`;
+								}
+								html += '</div>';
+							}
+							linksDiv.innerHTML = html;
+						}
 		</script>
 
 		<style>
