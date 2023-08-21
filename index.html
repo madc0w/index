@@ -2,185 +2,149 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>FofoLabs</title>
-
-		<script
-			async="true"
-			type="text/javascript"
-			src="https://test.blnry.com/api/bridge?i=64a28d4b78279e2358a0caf3"
-		></script>
-
-		<script
-			async="true"
-			type="text/javascript"
-			src="https://test.blnry.com/api/bridge?i=6454c4ce38315e1472318c12"
-		></script>
-		<!-- 		
-
-		<script
-			async="true"
-			type="text/javascript"
-			src="https://test.blnry.com/api/bridge?i=6478940e1a20ff34dbba62d6"
-		></script>
-		<script
-			async="true"
-			type="text/javascript"
-			src="https://localhost:3000/api/bridge?i=6478940e1a20ff34dbba62d6"
-		></script> -->
-
-		<!-- 		
-		<script
-			async="true"
-			type="text/javascript"
-			src="https://blnry.com/api/bridge?i=62d673bf24b664001680a081"
-		></script>
-		<script
-			async="true"
-			type="text/javascript"
-			src="https://test.blnry.com/api/bridge?i=6324deeaa9ebf8faf35a813d"
-		></script> -->
 		<link rel="icon" type="image/x-icon" href="favicon.png" />
 
 		<script>
-						function load() {
-							const types = {
-								games: 'Games',
-								tools: 'Tools',
-								other: 'Other',
-							};
+			function load() {
+				const types = {
+					games: 'Games',
+					tools: 'Tools',
+					other: 'Other',
+				};
 
-							const projects = {
-								games: [
-									{
-										name: 'The Xmas Game',
-										link: 'xmas',
-									},
-									{
-										name: 'Timeline',
-										link: 'timeline',
-									},
-									{
-										name: 'Wurdle',
-										link: 'wordle',
-									},
-									{
-										name: 'Adventure Quest',
-										link: 'adventure-time',
-									},
-									{
-										name: 'N-tris',
-										link: 'n-tris',
-									},
-									{
-										name: 'Naval Treasure',
-										link: 'navaltreasure',
-									},
-									{
-										name: 'WordSquare',
-										link: 'wordsquare',
-									},
-									{
-										name: 'WordDrop',
-										link: 'worddrop',
-									},
-									{
-										name: 'Type-o-Matic',
-										link: 'typo',
-									},
-									{
-										name: 'Plumbus Factory',
-										link: 'plumbus-factory',
-									},
-								],
-								tools: [
-									{
-										name: 'Set Solver',
-										link: 'https://madc0w.github.io/set/solver.html'
-									}
-									{
-										name: 'Math-o-Matix',
-										link: 'https://mathomatix.com',
-									},
-									{
-										name: 'Balloonary',
-										link: 'https://www.balloonary.com',
-									},
-									{
-										name: 'Mad Music',
-										link: 'mad-music',
-									},
-									{
-										name: 'Analogizer',
-										link: 'analogizer',
-									},
-									{
-										name: 'Financial Fitness Forecaster',
-										link: 'financial-fitness-forecaster',
-									},
-									{
-										name: 'ELO Estimator',
-										link: 'elo-estimator',
-									},
-									{
-										name: 'Mars Finder',
-										link: 'mars-finder',
-									},
-									{
-										name: 'Vocabulator',
-										link: 'vocabulator',
-									},
-								],
-								other: [
-									{
-										name: 'Spliner',
-										link: 'spliner',
-									},
-									{
-										name: 'Cardioid',
-										link: 'cardioid',
-										// }, {
-										// 	// TODO
-										// 	name: 'Doodles',
-										// 	link: 'doodles',
-									},
-									{
-										name: 'Quizler',
-										link: 'quizler',
-									},
-									{
-										name: 'It is what it is',
-										link: 'it-is-what-it-is',
-									},
-									{
-										name: 'Let it Snow!',
-										link: 'bouncing-heads',
-									},
-									{
-										name: 'Feigenbaum',
-										link: 'feigenbaum',
-									},
-									{
-										name: 'The Fifth Ring',
-										link: 'fifth-ring',
-									},
-								],
-							};
+				const projects = {
+					games: [
+						{
+							name: 'The Xmas Game',
+							link: 'xmas',
+						},
+						{
+							name: 'Timeline',
+							link: 'timeline',
+						},
+						{
+							name: 'Wurdle',
+							link: 'wordle',
+						},
+						{
+							name: 'Adventure Quest',
+							link: 'adventure-time',
+						},
+						{
+							name: 'N-tris',
+							link: 'n-tris',
+						},
+						{
+							name: 'Naval Treasure',
+							link: 'navaltreasure',
+						},
+						{
+							name: 'WordSquare',
+							link: 'wordsquare',
+						},
+						{
+							name: 'WordDrop',
+							link: 'worddrop',
+						},
+						{
+							name: 'Type-o-Matic',
+							link: 'typo',
+						},
+						{
+							name: 'Plumbus Factory',
+							link: 'plumbus-factory',
+						},
+					],
+					tools: [
+						{
+							name: 'Set Solver',
+							link: 'https://madc0w.github.io/set/solver.html',
+						},
+						{
+							name: 'Math-o-Matix',
+							link: 'https://mathomatix.com',
+						},
+						{
+							name: 'Balloonary',
+							link: 'https://www.balloonary.com',
+						},
+						{
+							name: 'Mad Music',
+							link: 'mad-music',
+						},
+						{
+							name: 'Analogizer',
+							link: 'analogizer',
+						},
+						{
+							name: 'Financial Fitness Forecaster',
+							link: 'financial-fitness-forecaster',
+						},
+						{
+							name: 'ELO Estimator',
+							link: 'elo-estimator',
+						},
+						{
+							name: 'Mars Finder',
+							link: 'mars-finder',
+						},
+						{
+							name: 'Vocabulator',
+							link: 'vocabulator',
+						},
+					],
+					other: [
+						{
+							name: 'Spliner',
+							link: 'spliner',
+						},
+						{
+							name: 'Cardioid',
+							link: 'cardioid',
+							// }, {
+							// 	// TODO
+							// 	name: 'Doodles',
+							// 	link: 'doodles',
+						},
+						{
+							name: 'Quizler',
+							link: 'quizler',
+						},
+						{
+							name: 'It is what it is',
+							link: 'it-is-what-it-is',
+						},
+						{
+							name: 'Let it Snow!',
+							link: 'bouncing-heads',
+						},
+						{
+							name: 'Feigenbaum',
+							link: 'feigenbaum',
+						},
+						{
+							name: 'The Fifth Ring',
+							link: 'fifth-ring',
+						},
+					],
+				};
 
-							let html = '';
-							const linksDiv = document.getElementById('links');
-							for (const type in projects) {
-								html += `<div><div class="type-header">${types[type]}</div>`;
-								for (const proj of projects[type]) {
-									const link = proj.link.includes('://')
-										? proj.link
-										: `https://madc0w.github.io/${proj.link}`;
-									html += `<div class="project-link"> \
+				let html = '';
+				const linksDiv = document.getElementById('links');
+				for (const type in projects) {
+					html += `<div><div class="type-header">${types[type]}</div>`;
+					for (const proj of projects[type]) {
+						const link = proj.link.includes('://')
+							? proj.link
+							: `https://madc0w.github.io/${proj.link}`;
+						html += `<div class="project-link"> \
 			<a href="${link}">${proj.name}</a> \
 			</div>`;
-								}
-								html += '</div>';
-							}
-							linksDiv.innerHTML = html;
-						}
+					}
+					html += '</div>';
+				}
+				linksDiv.innerHTML = html;
+			}
 		</script>
 
 		<style>
