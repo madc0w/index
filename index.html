@@ -15,14 +15,6 @@
 				const projects = {
 					games: [
 						{
-							name: 'PicaPic',
-							link: 'https://distrochess.com/picapic',
-						},
-						{
-							name: 'DistroChess',
-							link: 'https://distrochess.com',
-						},
-						{
 							name: 'The Xmas Game',
 							link: 'xmas',
 						},
@@ -62,12 +54,16 @@
 							name: 'Plumbus Factory',
 							link: 'plumbus-factory',
 						},
+						{
+							name: 'PicaPic',
+							// link: 'https://distrochess.com/picapic',
+						},
+						{
+							name: 'DistroChess',
+							// link: 'https://distrochess.com',
+						},
 					],
 					tools: [
-						{
-							name: 'YouTube Playlister',
-							link: 'https://youtubeplaylister.com',
-						},
 						{
 							name: 'Looper',
 							link: 'looper',
@@ -111,6 +107,10 @@
 						{
 							name: 'Vocabulator',
 							link: 'vocabulator',
+						},
+						{
+							name: 'YouTube Playlister',
+							// link: 'https://youtubeplaylister.com',
 						},
 					],
 					other: [
@@ -162,14 +162,16 @@
 				for (const type in projects) {
 					html += `<div><div class="type-header">${types[type]}</div>`;
 					for (const proj of projects[type]) {
-						const link = proj.link.includes('://')
-							? proj.link
-							: `https://madc0w.github.io/${proj.link}`;
-						html += `<div class="project-link"> \
-			<a href="${link}">${proj.name}</a> \
-			</div>`;
+						if (proj.link) {
+							const link = proj.link.includes('://')
+								? proj.link
+								: `https://madc0w.github.io/${proj.link}`;
+							html += `<div class="project-link"><a href="${link}">${proj.name}</a>`;
+						} else {
+							html += `<div class="defunct">${proj.name}`;
+						}
+						html += '</div>';
 					}
-					html += '</div>';
 				}
 				linksDiv.innerHTML = html;
 			}
@@ -218,6 +220,14 @@
 				margin-left: 10px;
 				margin-top: 10px;
 				font-size: 1.2em;
+			}
+
+			.defunct {
+				margin-left: 10px;
+				margin-top: 10px;
+				font-size: 1.2em;
+				color: #888;
+				text-decoration: line-through;
 			}
 
 			.type-header {
